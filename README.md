@@ -21,7 +21,8 @@ go install \
 
 # 3文件结构
 ### 3.1 service [定义proto协议文件](https://github.com/hardstifler/buf_demo/tree/dev/service)
-### 3.2 buf.gen.yaml [如何编译生成代码](https://github.com/hardstifler/buf_demo/blob/dev/buf.gen.yaml), 此处我想吧proto与生成的代码作为独立的工程管理，因此指定的输出目录为绝对目录
+### 3.2 buf.gen.yaml [如何编译生成代码](https://github.com/hardstifler/buf_demo/blob/dev/buf.gen.yaml),
+### 3.2.1 此处我想把proto与生成的代码作为独立的工程管理，因此指定的输出目录为绝对目录
 ### 3.3 buf.yaml [定义模块，管理依赖](https://github.com/hardstifler/buf_demo/blob/dev/buf.yaml)
 
 # 4编译
@@ -33,4 +34,5 @@ buf mod update
 ```
 buf generate
 ```
+生成的代码作为独立工程存在，可以作为go module导入
 
