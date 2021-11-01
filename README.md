@@ -17,3 +17,18 @@ go install \
 ```
 
 ### 2.5 我们使用buf来帮我们生成go代码从而替换protoc 的方式，原因。。。。  protoc命令需要指定插件，指定输入输出目录，有一点繁琐. 
+
+# 3文件结构
+### 3.1 service [定义proto协议文件](https://github.com/hardstifler/buf_demo/tree/dev/service)
+### 3.2 buf.gen.yaml [如何编译生成代码](https://github.com/hardstifler/buf_demo/blob/dev/buf.gen.yaml)
+### 3.3 buf.yaml [定义模块，管理依赖](https://github.com/hardstifler/buf_demo/blob/dev/buf.yaml)
+
+# 4编译
+### 4.1 更新依赖 buf 
+```
+buf mod update
+```
+### 4.2 编译生成代码
+```
+buf generate
+```
