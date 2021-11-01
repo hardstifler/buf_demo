@@ -1,0 +1,10 @@
+ version: v1
+ plugins:
+   - name: go
+     out: /go/src/hardstifler.github.com/demo/proto
+   - name: go-grpc
+     out: /go/src/hardstifler.github.com/demo/proto
+   - name: grpc-gateway
+     out: /go/src/hardstifler.github.com/demo/proto
+   - name: openapiv2
+     out: /go/src/hardstifler.github.com/demo/proto
