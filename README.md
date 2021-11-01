@@ -17,7 +17,13 @@ go install \
     google.golang.org/grpc/cmd/protoc-gen-go-grpc  
 ```
 
-### 2.5 我们使用buf来帮我们生成go代码从而替换protoc 的方式，原因。。。。  protoc命令需要指定插件，指定输入输出目录，有一点繁琐. 
+### 2.5 我们使用buf来帮我们生成go代码从而替换protoc 的方式，原因。。。。  protoc命令需要指定插件，指定输入输出目录，有一点繁琐 参照下面的命令 
+```
+protoc -I . \
+    --go_out ./gen/go/ --go_opt paths=source_relative \
+    --go-grpc_out ./gen/go/ --go-grpc_opt paths=source_relative \
+    your/service/v1/your_service.proto
+```
 
 # 3文件结构
 ### 3.1 service [定义proto协议文件](https://github.com/hardstifler/buf_demo/tree/dev/service)
